@@ -21,7 +21,7 @@ class XfeatExtractor(FeatureExtractor):
 
         # self.xfeat = XFeat(top_k = max_num_keypoints, detection_threshold=detection_threshold)
         self.xfeat = torch.hub.load(
-            'verlab/accelerated_features', 
+            'verlab/accelerated_features:main',  # cached ref: no GitHub lookup per run
             'XFeat', 
             pretrained = True, 
             top_k = max_num_keypoints,

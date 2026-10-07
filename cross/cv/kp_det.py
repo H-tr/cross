@@ -74,7 +74,7 @@ class KpDetXfeat(KpDet):
         super().__init__(device, config)
 
         self.xfeat = torch.hub.load(
-            'verlab/accelerated_features', 
+            'verlab/accelerated_features:main',  # cached ref: no GitHub lookup per run
             'XFeat', 
             pretrained = True, 
             top_k = self.config["n_keypoints"],

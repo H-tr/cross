@@ -15,7 +15,7 @@ class BoQ():
         # ResNet50 + BoQ
         if backbone_name == "resnet50":
             self.vpr_model = torch.hub.load(
-                "amaralibey/bag-of-queries", 
+                "amaralibey/bag-of-queries:main",  # cached ref: no GitHub lookup per run
                 "get_trained_boq", 
                 backbone_name=backbone_name, 
                 output_dim=16384,
@@ -24,7 +24,7 @@ class BoQ():
             self.output_dim = 16384
         elif backbone_name == "dinov2":
             self.vpr_model = torch.hub.load(
-                "amaralibey/bag-of-queries", 
+                "amaralibey/bag-of-queries:main",  # cached ref: no GitHub lookup per run
                 "get_trained_boq", 
                 backbone_name=backbone_name, 
                 output_dim=12288, 
